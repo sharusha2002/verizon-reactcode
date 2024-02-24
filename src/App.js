@@ -1,19 +1,28 @@
-import { Route,Routes } from 'react-router-dom';
 import './App.css';
 import Home from './Components/Home';
-import User from './Components/User';
+import {Route, Routes} from 'react-router-dom';
+import Product from './Components/Product';
 import Header from './Components/Header';
-import About from './Components/About';
+import Search from './Components/Search';
+import AddProduct from './Components/AddProduct';
 function App() {
   return (
     <div className="App">
-      <Header/>
-        <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/user' element={<User/>}/>
-          <Route path='/about' element={<About/>}/>
+      <div className='containe-fluid'>
+        <div className='row'>
+          <div className='col'>
+            <Header/>
+          </div>
+          
+        </div>
+       
+      </div>
+      <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/product" element={<Product/>} />
+            <Route path="/search" element={<Search/>} />
+            <Route path="/addproduct" element={<AddProduct/>} />
         </Routes>
-        
     </div>
   );
 }
