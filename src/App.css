@@ -1,7 +1,6 @@
-#id1{
-  background-color: red;
-}
-
-body{
-  background-color: antiquewhite;
+.linkstyle{
+    /* background-color: aqua; */
+    padding-left: 30px;
+    text-decoration: none;
+    color: red;
 }
