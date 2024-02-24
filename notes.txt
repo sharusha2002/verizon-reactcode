@@ -1,0 +1,4 @@
+Props are used to pass data from a parent component to a child component, 
+while state is used to manage data within a component. 
+Props are immutable and cannot be changed within a component,
+ while state is mutable and can be updated using the setState function.

@@ -1,0 +1,12 @@
+Props vs States:
+
+Props are used to pass data from a parent component to a child component, 
+while state is used to manage data within a component. 
+Props are immutable and cannot be changed within a component,
+ while state is mutable and can be updated using the setState function.
+
+constructor is a special function --> it is automatically called. Whenever and at the time of object creation.
+
+In java it is called with class name and with no return type.
+
+If we want to call again and again a function use it as a constructor

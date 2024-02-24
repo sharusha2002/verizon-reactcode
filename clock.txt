@@ -1,0 +1,67 @@
+
+Class Component Timer code
+
+import React, { Component } from 'react';
+
+class Timer extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      timer: 0,
+    };
+  }
+
+  componentDidMount() {
+    // Start the timer when the component mounts
+    this.intervalId = setInterval(() => {
+      this.setState((prevState) => ({
+        timer: prevState.timer + 1,
+      }));
+    }, 1000);
+  }
+
+  componentDidUpdate() {
+    // Additional logic to perform on each update (if needed)
+  }
+
+  componentWillUnmount() {
+    // Stop the timer when the component is unmounted
+    clearInterval(this.intervalId);
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Timer: {this.state.timer} seconds</h1>
+      </div>
+    );
+  }
+}
+
+export default Timer;
+
+Functional Component:
+import React, { useState, useEffect } from 'react';
+
+const Timer = () => {
+  const [seconds, setSeconds] = useState(0);
+
+  useEffect(() => {
+    // This effect will be called when the component mounts
+    const intervalId = setInterval(() => {
+      // Increment seconds every second
+      setSeconds(prevSeconds => prevSeconds + 1);
+    }, 1000);
+
+    // The cleanup function will clear the interval when the component unmounts
+    return () => clearInterval(intervalId);
+  }, []); // The empty dependency array ensures that this effect runs only once on mount
+
+  return (
+    <div>
+      <h1>Timer: {seconds} seconds</h1>
+    </div>
+  );
+};
+
+export default Timer;
