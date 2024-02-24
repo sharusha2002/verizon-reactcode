@@ -1,30 +1,30 @@
 import './App.css';
-import Home from './Components/Home';
-import {Route, Routes} from 'react-router-dom';
-import Product from './Components/Product';
-import Header from './Components/Header';
-import Search from './Components/Search';
-import AddProduct from './Components/AddProduct';
+import { Component } from 'react';
+import New from './Components/New';
 function App() {
   return (
     <div className="App">
-      <div className='containe-fluid'>
-        <div className='row'>
-          <div className='col'>
-            <Header/>
-          </div>
-          
-        </div>
-       
-      </div>
-      <Routes>
-            <Route path="/" element={<Home/>} />
-            <Route path="/product" element={<Product/>} />
-            <Route path="/search" element={<Search/>} />
-            <Route path="/addproduct" element={<AddProduct/>} />
-        </Routes>
+      hello world
+      <New/>
+      <MainBody/>
     </div>
   );
 }
 
+class MainBody extends Component{
+  render(){
+    return(
+      <div>
+        Welcome to react folder
+      </div>
+    )
+  }
+}
+// function New(){
+//   return (
+//     <div>
+//       Coming from another component
+//     </div>
+//   )
+// }
 export default App;
